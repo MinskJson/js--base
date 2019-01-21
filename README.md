@@ -1,5 +1,9 @@
 # Полезные материалы по JS и воообще
 
+## Задачки для ДЗ
+https://github.com/vvscode/js--base-course
+
+
 ## Перед тем как начать двигаться в IT:
 https://uideo.ru/videos/381
 
