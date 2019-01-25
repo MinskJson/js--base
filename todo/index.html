@@ -14,6 +14,10 @@
             align-items: center;
         }
 
+        .todo-item--hidden {
+            display: none;
+        }
+
         .todo-item__check:checked ~ .todo-item__name {
             text-decoration: line-through;
         }
@@ -30,7 +34,7 @@
 
         /* form */
         .todo-form {
-            padding: 40px;
+            padding: 12px 40px;
             display: flex;
             align-items: center;
             border: 2px solid green;
@@ -50,13 +54,25 @@
         .todo-footer__item + .todo-footer__item {
             margin-left: 12px;
         }
+
+        .todo-footer__actions {
+            flex: 1;
+            display: flex;
+            padding: 4px;
+            justify-content: center;
+            border: 2px solid blueviolet
+        }
+
+        [type="radio"]:checked ~ span {
+            color: red;
+        }
     </style>
 </head>
 
 <body>
     <form class="todo-form">
         <div class="todo-form__item">
-            <input class="todo-form__input" type="text" />
+            <input class="todo-form__input" required name="checkName" type="text" />
         </div>
         <div class="todo-form__item">
             <button class="todo-form__button" type="submit">
@@ -65,26 +81,136 @@
         </div>
     </form>
     <div class="todo-list">
-        <label class="todo-item">
-            <input class="todo-item__check" type="checkbox" />
-            <span class="todo-item__name">
-                Hasjdhajsgd
-            </span>
-            <button class="todo-item__remove">
-                x
-            </button>
-        </label>
+        <!-- todo-item -->
     </div>
     <div class="todo-footer">
         <div class="todo-footer__item">
-            5 items
+            <span class="todo-footer__count">5</span> items
         </div>
         <div class="todo-footer__item todo-footer__actions">
-            <button class="todo-footer__btn">All</button>
-            <button class="todo-footer__btn">Active</button>
-            <button class="todo-footer__btn">Complete</button>
+            <label>
+                <input type="radio" checked name="filter[]" value="all" class="todo-footer__btn" />
+                <span>All</span>
+            </label>
+            <label>
+                <input type="radio" name="filter[]" value="active" class="todo-footer__btn" />
+                <span>Active</span>
+            </label>
+            <label>
+                <input type="radio" name="filter[]" value="complite" class="todo-footer__btn" />
+                <span>Complite</span>
+            </label>
         </div>
     </div>
+
+    <script>
+        function todoItem(name) {
+            const fragment = document.createElement('fragmet');
+            fragment.innerHTML =
+                `
+                <label class="todo-item">
+                    <input class="todo-item__check" type="checkbox" />
+
+                    <span class="todo-item__name">
+                        ${name}
+                    </span>
+                    <button class="todo-item__remove">
+                        x
+                    </button>
+                </label>
+            `;
+
+            // способ 1 на удаление
+            // fragment
+            //     .querySelector('.todo-item__remove')
+            //     .addEventListener('click', (e) => {
+            //         fragment.remove();
+            //     });
+
+            return fragment;
+        }
+
+        // view
+        function render() {
+            const count = document.querySelector('.todo-footer__count');
+            const list = document.querySelector('.todo-list');
+
+            count.innerText = list.children.length;
+
+            const filter = document.querySelector('[type="radio"]:checked');
+
+            let items = Array.from(document.querySelectorAll('.todo-item'));
+
+            // не выполняем код ниже
+            if (items.length === 0) return;
+
+            items.forEach(el => {
+                el.classList.remove('todo-item--hidden');
+            });
+
+            switch (filter.value) {
+                case 'complite': {
+                    let items = Array.from(document.querySelectorAll('.todo-item__check:not(:checked)'));
+                    items.forEach(el => {
+                        el.closest('.todo-item').classList.add('todo-item--hidden');
+                    });
+                    break;
+                }
+                case 'active': {
+                    let items = Array.from(document.querySelectorAll('.todo-item__check:checked'));
+                    items.forEach(el => {
+                        el.closest('.todo-item').classList.add('todo-item--hidden');
+                    });
+                    break;
+                }
+            }
+        }
+
+        // controller
+
+        function add(str) {
+            const list = document.querySelector('.todo-list');
+            list.appendChild(todoItem(str));
+
+            render();
+        }
+
+        function remove(element) {
+            element.remove();
+
+            render();
+        }
+
+        // \\controller
+
+        const list = document.querySelector('.todo-list');
+        list.addEventListener('click', (e) => {
+            if (e.target.matches('.todo-item__remove')) {
+                remove(e.target.closest('fragmet'));
+            }
+
+            render();
+        });
+
+        const filterActions = document.querySelector('.todo-footer__actions');
+        filterActions.addEventListener('click', (e) => {
+            render();
+        });
+
+        const form = document.querySelector('.todo-form');
+        form.addEventListener('submit', (e) => {
+            const tagForm = e.target;
+            const tagInput = tagForm.checkName;
+
+            add(tagInput.value);
+            tagInput.value = '';
+
+            e.preventDefault();
+        });
+
+        render();
+
+    </script>
 </body>
 
 </html>
