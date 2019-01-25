@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* item */
+        .todo-item {
+            display: flex;
+            border: 1px solid black;
+            align-items: center;
+        }
+
+        .todo-item__check:checked ~ .todo-item__name {
+            text-decoration: line-through;
+        }
+
+        .todo-item__name {
+            flex: 1;
+        }
+
+        /* list */
+        .todo-list {
+            padding: 40px;
+            border: 2px solid red;
+        }
+
+        /* form */
+        .todo-form {
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            border: 2px solid green;
+        }
+
+        .todo-form__item + .todo-form__item {
+            margin-left: 12px;
+        }
+
+        .todo-footer {
+            padding: 12px 40px;
+            display: flex;
+            align-items: center;
+            border: 2px solid #eeeeee;
+        }
+
+        .todo-footer__item + .todo-footer__item {
+            margin-left: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="todo-form">
+        <div class="todo-form__item">
+            <input class="todo-form__input" type="text" />
+        </div>
+        <div class="todo-form__item">
+            <button class="todo-form__button" type="submit">
+                Add
+            </button>
+        </div>
+    </form>
+    <div class="todo-list">
+        <label class="todo-item">
+            <input class="todo-item__check" type="checkbox" />
+            <span class="todo-item__name">
+                Hasjdhajsgd
+            </span>
+            <button class="todo-item__remove">
+                x
+            </button>
+        </label>
+    </div>
+    <div class="todo-footer">
+        <div class="todo-footer__item">
+            5 items
+        </div>
+        <div class="todo-footer__item todo-footer__actions">
+            <button class="todo-footer__btn">All</button>
+            <button class="todo-footer__btn">Active</button>
+            <button class="todo-footer__btn">Complete</button>
+        </div>
+    </div>
+</body>
+
+</html>
