@@ -1,0 +1,17 @@
+{
+  "name": "roll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "rollup main.js -f cjs -d dist",
+    "start": "node main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "numeral": "^2.0.6",
+    "numeraljs": "^1.5.6",
+    "rollup": "^1.1.2"
+  }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            width: 150px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            height: 100px;
+            position: relative;
+        }
+
+        fragment {
+            background: white;
+        }
+        .slider__item {
+            width: 50px;
+            min-width: 50px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            border: 1px solid black;
+            height: 50px;
+        }
+        .slider {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slider">
+        </div>
+    </div>
+    <button id="prev">Prev</button>
+    <button id="next">Next</button>
+    <script>
+        function itemTemplate(num) {
+            const el = document.createElement('fragment');
+            el.innerHTML = `<div class="slider__item">${num}</div>`;
+
+            return el;
+        };
+
+        const items = new Array(1000).fill(0).map((e, index) => index);
+
+        const slider = document.querySelector('.slider');
+        const container = document.querySelector('.container');
+
+        let num = 0;
+        while(num < 7 && ++num) {
+            slider.appendChild(itemTemplate(num));
+        }
+
+        // -------
+        //
+        let index = 2;
+        let indexReal = 3;
+
+        slider.style.marginLeft = (-50 * index) + 'px';
+
+        function remove(direction) {
+            const selector = direction > 0 ? 'fragment:first-child' : 'fragment:last-child';
+            slider.querySelector(selector).remove();
+        }
+
+        function add(number, direction) {
+            let addIndexElement = 0;
+            if (direction > 0) {
+                if ((number + 4) >= 0 && (number + 4) <= items.length - 1) {
+                    addIndexElement = number + 4;
+                } else {
+                    addIndexElement = (number + 4) % (items.length - 1);
+                }
+            } else {
+                if ((number - 4) >= 0 && (number - 4) <= items.length - 1 ) {
+                    addIndexElement = number - 4;
+                } else {
+                    addIndexElement = ((items.length - 1) - (number - 4)) % (items.length - 1);
+                }
+            }
+            slider[direction > 0 ? 'appendChild': 'prepend'](itemTemplate(items[addIndexElement]));
+        }
+
+        document.querySelector('#prev').addEventListener('click', ()=> {
+            indexReal -= 1;
+            let pixels = (-50 * (index - 1));
+            slider.style.marginLeft = pixels + 'px';
+            const interval = setInterval(() => {
+                pixels += 1;
+                if (pixels <= -50 * (index)) {
+                    return clearInterval(interval);
+                }
+                slider.style.marginLeft = pixels + 'px';
+            }, 60);
+            if (indexReal < 0) {
+                indexReal = items.length - 1;
+            }
+            remove(-1);
+            add(indexReal, -1);
+        });
+
+        document.querySelector('#next').addEventListener('click', ()=> {
+            indexReal += 1;
+            let pixels = (-50 * (index + 1));
+            slider.style.marginLeft = pixels + 'px';
+            const interval = setInterval(() => {
+                pixels -= 1;
+                if (pixels >= -50 * (index)) {
+                    return clearInterval(interval);
+                }
+                slider.style.marginLeft = pixels + 'px';
+            }, 60);
+            if (indexReal > items.length - 1) {
+                indexReal = 0;
+            }
+            remove(+1);
+            add(indexReal, +1);
+        });
+    </script>
+</body>
+</html>
