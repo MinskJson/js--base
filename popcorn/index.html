@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* button */
+    .button {
+        /* action bg: */
+        background: #E53935;
+        box-shadow: 0 8px 30px 0 rgba(229,57,53,0.31);
+        border-radius: 6px;
+        /* Action: */
+        font-family: Helvetica;
+        font-size: 13px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        text-align: center;
+        height: 40px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* list-item */
+    .list-item {
+        /* card_base: */
+        background: #FFFFFF;
+        box-shadow: 0 8px 30px 0 rgba(227,227,227,0.37);
+        border-radius: 10px;
+        padding: 15px 12px;
+        display: flex;
+        max-height: 112px;
+        margin-top: 56px;
+    }
+
+    .list-item__block + .list-item__block {
+        margin-left: 20px;
+    }
+
+    .list-item__img-wr {
+        margin-top: -42px;
+    }
+    .list-item__img-wr,  .list-item__img-wr img {
+        /* Mask: */
+        background: #D8D8D8;
+        border-radius: 10px;
+        width: 108px;
+        height: 123px;
+        object-fit: cover;
+        /* doctor strange 1: */
+        /* paddington-2-et00057858-30-05-2017-03-52-01: */
+    }
+
+    .list-item__title {
+        /* Star Wars: The Last: */
+        font-family: Helvetica;
+        font-size: 16px;
+        color: #000000;
+        letter-spacing: 0;
+        margin-bottom: 4px;
+    }
+
+    .list-item__sub-title {
+        /* Action | Science fic: */
+        font-family: Helvetica;
+        font-size: 12px;
+        color: #A6A6A6;
+        margin-bottom: 7px;
+        letter-spacing: 0;
+    }
+
+    .list-item__rate {
+        /* IMDB: */
+        font-family: Helvetica;
+        font-size: 12px;
+        color: #A6A6A6;
+        letter-spacing: 0;
+    }
+
+    .list-item__rate b{
+        /* 7.5: */
+        font-family: Helvetica;
+        font-size: 12px;
+        color: #000000;
+        letter-spacing: 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="button">Hello</div>
+    <!-- list -->
+    <div>
+        <div class="list-item">
+            <div class="list-item__block list-item__img-wr">
+                <img src="https://html.com/wp-content/uploads/flamingo.jpg"/>
+            </div>
+            <div class="list-item__block">
+                <div class="list-item__title">Star Wars: The Last Jedi (3D)</div>
+                <div class="list-item__sub-title">Action | Science fiction  -  2h 33m</div>
+                <div class="list-item__rate">
+                    <span>IMDB:</span>
+                    <b>7.5</b>
+                </div>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__block list-item__img-wr">
+                <img src="https://html.com/wp-content/uploads/flamingo.jpg"/>
+            </div>
+            <div class="list-item__block">
+                <div class="list-item__title">Star Wars: The Last Jedi (3D)</div>
+                <div class="list-item__sub-title">Action | Science fiction  -  2h 33m</div>
+                <div class="list-item__rate">
+                    <span>IMDB:</span>
+                    <b>7.5</b>
+                </div>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__block list-item__img-wr">
+                <img src="https://html.com/wp-content/uploads/flamingo.jpg"/>
+            </div>
+            <div class="list-item__block">
+                <div class="list-item__title">Star Wars: The Last Jedi (3D)</div>
+                <div class="list-item__sub-title">Action | Science fiction  -  2h 33m</div>
+                <div class="list-item__rate">
+                    <span>IMDB:</span>
+                    <b>7.5</b>
+                </div>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__block list-item__img-wr">
+                <img src="https://html.com/wp-content/uploads/flamingo.jpg"/>
+            </div>
+            <div class="list-item__block">
+                <div class="list-item__title">Star Wars: The Last Jedi (3D)</div>
+                <div class="list-item__sub-title">Action | Science fiction  -  2h 33m</div>
+                <div class="list-item__rate">
+                    <span>IMDB:</span>
+                    <b>7.5</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    const products = {"products":[{"id":765257,"key":"cmw2070m","name":"CMW 2070M","full_name":"Candy CMW 2070M","name_prefix":"Микроволновая печь","extended_name":"Candy CMW 2070M","status":"active","images":{"header":"\/\/content2.onliner.by\/catalog\/device\/header\/9f0a3a8f2d5e06c0817c104243047ff2.jpg","icon":"\/\/content2.onliner.by\/catalog\/device\/icon\/ea7254c67274ebde0c42d5354ec8a6c0.jpg"},"description":"микроволны (соло), объем 20 л, выходная мощность микроволн 700 Вт, управление механическое, цвет белый","html_url":"https:\/\/catalog.onliner.by\/microvawe\/candy\/cmw2070m","reviews":{"rating":45,"count":11,"html_url":"https:\/\/catalog.onliner.by\/microvawe\/candy\/cmw2070m\/reviews","url":"https:\/\/catalog.api.onliner.by\/products\/cmw2070m\/reviews"},"review_url":null,"url":"https:\/\/catalog.api.onliner.by\/products\/cmw2070m","prices":{"min":1090000,"price_min":{"amount":"109.00","currency":"BYN","converted":{"BYN":{"amount":"109.00","currency":"BYN"},"BYR":{"amount":"1090000","currency":"BYR"}}},"max":1734400,"price_max":{"amount":"173.44","currency":"BYN","converted":{"BYN":{"amount":"173.44","currency":"BYN"},"BYR":{"amount":"1734400","currency":"BYR"}}},"currency_sign":"руб.","towns":{"minsk":{"count":15}},"offers":{"count":15},"html_url":"https:\/\/catalog.onliner.by\/microvawe\/candy\/cmw2070m\/prices","url":"https:\/\/shop.api.onliner.by\/products\/cmw2070m\/positions"},"second":{"offers_count":0,"min_price":null},"is_tender_enabled":false,"tender_disability_reason":"Не участвует в тендерах"},{"id":286771,"key":"ms23f302tas","name":"MS23F302TAS","full_name":"Samsung MS23F302TAS","name_prefix":"Микроволновая печь","extended_name":"Samsung MS23F302TAS","status":"active","images":{"header":"\/\/content2.onliner.by\/catalog\/device\/header\/fddeb2a2a8448f51ec71601c372deeea.jpg","icon":"\/\/content2.onliner.by\/catalog\/device\/icon\/9d553fc056cad567413874c2facc91f3.jpg"},"description":"микроволны (соло), объем 23 л, выходная мощность микроволн 800 Вт, управление электронное, автоприготовление, авторазмораживание, цвет серебристый","html_url":"https:\/\/catalog.onliner.by\/microvawe\/samsung\/ms23f302tas","reviews":{"rating":45,"count":17,"html_url":"https:\/\/catalog.onliner.by\/microvawe\/samsung\/ms23f302tas\/reviews","url":"https:\/\/catalog.api.onliner.by\/products\/ms23f302tas\/reviews"},"review_url":null,"url":"https:\/\/catalog.api.onliner.by\/products\/ms23f302tas","prices":{"min":2788600,"price_min":{"amount":"278.86","currency":"BYN","converted":{"BYN":{"amount":"278.86","currency":"BYN"},"BYR":{"amount":"2788600","currency":"BYR"}}},"max":3588200,"price_max":{"amount":"358.82","currency":"BYN","converted":{"BYN":{"amount":"358.82","currency":"BYN"},"BYR":{"amount":"3588200","currency":"BYR"}}},"currency_sign":"руб.","towns":{"minsk":{"count":8}},"offers":{"count":8},"html_url":"https:\/\/catalog.onliner.by\/microvawe\/samsung\/ms23f302tas\/prices","url":"https:\/\/shop.api.onliner.by\/products\/ms23f302tas\/positions"},"second":{"offers_count":0,"min_price":null},"is_tender_enabled":false,"tender_disability_reason":"Не участвует в тендерах"},{"id":760695,"key":"20mw7001479bkb","name":"20MW700-1479BKB","full_name":"Horizont 20MW700-1479BKB","name_prefix":"Микроволновая печь","extended_name":"Horizont 20MW700-1479BKB","status":"active","images":{"header":"\/\/content2.onliner.by\/catalog\/device\/header\/a077635088864239653602e88c7a9123.jpeg","icon":"\/\/content2.onliner.by\/catalog\/device\/icon\/8be76603dfca1a13225b7bd06a14d94d.jpg"},"description":"микроволны и гриль, объем 20 л, выходная мощность микроволн 700 Вт, управление электронное, автоприготовление, авторазмораживание, цвет серый","html_url":"https:\/\/catalog.onliner.by\/microvawe\/horizont\/20mw7001479bkb","reviews":{"rating":50,"count":7,"html_url":"https:\/\/catalog.onliner.by\/microvawe\/horizont\/20mw7001479bkb\/reviews","url":"https:\/\/catalog.api.onliner.by\/products\/20mw7001479bkb\/reviews"},"review_url":null,"url":"https:\/\/catalog.api.onliner.by\/products\/20mw7001479bkb","prices":{"min":1726700,"price_min":{"amount":"172.67","currency":"BYN","converted":{"BYN":{"amount":"172.67","currency":"BYN"},"BYR":{"amount":"1726700","currency":"BYR"}}},"max":1975000,"price_max":{"amount":"197.50","currency":"BYN","converted":{"BYN":{"amount":"197.50","currency":"BYN"},"BYR":{"amount":"1975000","currency":"BYR"}}},"currency_sign":"руб.","towns":{"minsk":{"count":19}},"offers":{"count":19},"html_url":"https:\/\/catalog.onliner.by\/microvawe\/horizont\/20mw7001479bkb\/prices","url":"https:\/\/shop.api.onliner.by\/products\/20mw7001479bkb\/positions"},"second":{"offers_count":0,"min_price":null},"is_tender_enabled":false,"tender_disability_reason":"Не участвует в тендерах"},{"id":1419732,"key":"fw77subbw","name":"FW77SUB","full_name":"Samsung FW77SUB","name_prefix":"Микроволновая печь","extended_name":"Samsung FW77SUB","status":"active","images":{"header":"\/\/content2.onliner.by\/catalog\/device\/header\/f58452a9921c4f4a0979680632533bcd.jpeg","icon":null},"description":"микроволны (соло), объем 20 л, выходная мощность микроволн 850 Вт, управление электронное, пароварка, авторазмораживание, цвет черный","html_url":"https:\/\/catalog.onliner.by\/microvawe\/samsung\/fw77subbw","reviews":{"rating":0,"count":0,"html_url":"https:\/\/catalog.onliner.by\/microvawe\/samsung\/fw77subbw\/reviews","url":"https:\/\/catalog.api.onliner.by\/products\/fw77subbw\/reviews"},"review_url":null,"url":"https:\/\/catalog.api.onliner.by\/products\/fw77subbw","prices":{"min":3894900,"price_min":{"amount":"389.49","currency":"BYN","converted":{"BYN":{"amount":"389.49","currency":"BYN"},"BYR":{"amount":"3894900","currency":"BYR"}}},"max":5190000,"price_max":{"amount":"519.00","currency":"BYN","converted":{"BYN":{"amount":"519.00","currency":"BYN"},"BYR":{"amount":"5190000","currency":"BYR"}}},"currency_sign":"руб.","towns":{"minsk":{"count":19}},"offers":{"count":19},"html_url":"https:\/\/catalog.onliner.by\/microvawe\/samsung\/fw77subbw\/prices","url":"https:\/\/shop.api.onliner.by\/products\/fw77subbw\/positions"},"second":{"offers_count":0,"min_price":null},"is_tender_enabled":false,"tender_disability_reason":"Не участвует в тендерах"},{"id":861492,"key":"am720c4ew","name":"AM720C4E-W","full_name":"Midea AM720C4E-W","name_prefix":"Микроволновая печь","extended_name":"Midea AM720C4E-W","status":"active","images":{"header":"\/\/content2.onliner.by\/catalog\/device\/header\/2c189204b0123e7a761e2adc7ed2e4e3.jpg","icon":null},"description":"микроволны (соло), объем 20 л, выходная мощность микроволн 700 Вт, управление электронное, автоприготовление, цвет белый","html_url":"https:\/\/catalog.onliner.by\/microvawe\/midea\/am720c4ew","reviews":{"rating":40,"count":3,"html_url":"https:\/\/catalog.onliner.by\/microvawe\/midea\/am720c4ew\/reviews","url":"https:\/\/catalog.api.onliner.by\/products\/am720c4ew\/reviews"},"review_url":null,"url":"https:\/\/catalog.api.onliner.by\/products\/am720c4ew","prices":{"min":1350000,"price_min":{"amount":"135.00","currency":"BYN","converted":{"BYN":{"amount":"135.00","currency":"BYN"},"BYR":{"amount":"1350000","currency":"BYR"}}},"max":1350000,"price_max":{"amount":"135.00","currency":"BYN","converted":{"BYN":{"amount":"135.00","currency":"BYN"},"BYR":{"amount":"1350000","currency":"BYR"}}},"currency_sign":"руб.","towns":{"minsk":{"count":2}},"offers":{"count":2},"html_url":"https:\/\/catalog.onliner.by\/microvawe\/midea\/am720c4ew\/prices","url":"https:\/\/shop.api.onliner.by\/products\/am720c4ew\/positions"},"second":{"offers_count":0,"min_price":null},"is_tender_enabled":false,"tender_disability_reason":"Не участвует в тендерах"},{"id":1117040,"key":"20mw7001378bis","name":"20MW700-1378BIS","full_name":"Horizont 20MW700-1378BIS","name_prefix":"Микроволновая печь","extended_name":"Horizont 20MW700-1378BIS","status":"active","images":{"header":"\/\/content2.onliner.by\/catalog\/device\/header\/5637feb04c3516359243b466002b7fcd.jpeg","icon":null},"description":"микроволны (соло), объем 20 л, выходная мощность микроволн 700 Вт, управление механическое, цвет серебристый","html_url":"https:\/\/catalog.onliner.by\/microvawe\/horizont\/20mw7001378bis","reviews":{"rating":50,"count":1,"html_url":"https:\/\/catalog.onliner.by\/microvawe\/horizont\/20mw7001378bis\/reviews","url":"https:\/\/catalog.api.onliner.by\/products\/20mw7001378bis\/reviews"},"review_url":null,"url":"https:\/\/catalog.api.onliner.by\/products\/20mw7001378bis","prices":{"min":1190000,"price_min":{"amount":"119.00","currency":"BYN","converted":{"BYN":{"amount":"119.00","currency":"BYN"},"BYR":{"amount":"1190000","currency":"BYR"}}},"max":1956200,"price_max":{"amount":"195.62","currency":"BYN","converted":{"BYN":{"amount":"195.62","currency":"BYN"},"BYR":{"amount":"1956200","currency":"BYR"}}},"currency_sign":"руб.","towns":{"minsk":{"count":20}},"offers":{"count":20},"html_url":"https:\/\/catalog.onliner.by\/microvawe\/horizont\/20mw7001378bis\/prices","url":"https:\/\/shop.api.onliner.by\/products\/20mw7001378bis\/positions"},"second":{"offers_count":0,"min_price":null},"is_tender_enabled":false,"tender_disability_reason":"Не участвует в тендерах"},{"id":1421775,"key":"me88sug","name":"ME88SUG","full_name":"Samsung ME88SUG","name_prefix":"Микроволновая печь","extended_name":"Samsung ME88SUG","status":"active","images":{"header":"\/\/content2.onliner.by\/catalog\/device\/header\/c6690763424629a80b9393af81819a7c.jpeg","icon":null},"description":"микроволны (соло), объем 23 л, выходная мощность микроволн 800 Вт, управление электронное, автоприготовление, авторазмораживание, цвет черный","html_url":"https:\/\/catalog.onliner.by\/microvawe\/samsung\/me88sug","reviews":{"rating":0,"count":0,"html_url":"https:\/\/catalog.onliner.by\/microvawe\/samsung\/me88sug\/reviews","url":"https:\/\/catalog.api.onliner.by\/products\/me88sug\/reviews"},"review_url":null,"url":"https:\/\/catalog.api.onliner.by\/products\/me88sug","prices":{"min":2437200,"price_min":{"amount":"243.72","currency":"BYN","converted":{"BYN":{"amount":"243.72","currency":"BYN"},"BYR":{"amount":"2437200","currency":"BYR"}}},"max":2691400,"price_max":{"amount":"269.14","currency":"BYN","converted":{"BYN":{"amount":"269.14","currency":"BYN"},"BYR":{"amount":"2691400","currency":"BYR"}}},"currency_sign":"руб.","towns":{"minsk":{"count":14}},"offers":{"count":14},"html_url":"https:\/\/catalog.onliner.by\/microvawe\/samsung\/me88sug\/prices","url":"https:\/\/shop.api.onliner.by\/products\/me88sug\/positions"},"second":{"offers_count":0,"min_price":null},"is_tender_enabled":false,"tender_disability_reason":"Не участвует в тендерах"},{"id":287897,"key":"mg23f302tas","name":"MG23F302TAS","full_name":"Samsung MG23F302TAS","name_prefix":"Микроволновая печь","extended_name":"Samsung MG23F302TAS","status":"active","images":{"header":"\/\/content2.onliner.by\/catalog\/device\/header\/e409070fda7a14cfaa85cd722b9cdf05.jpg","icon":"\/\/content2.onliner.by\/catalog\/device\/icon\/442e29eb89bff4114757327ad0f84a36.jpg"},"description":"микроволны и гриль, объем 23 л, выходная мощность микроволн 800 Вт, управление электронное, автоприготовление, авторазмораживание, цвет серебристый","html_url":"https:\/\/catalog.onliner.by\/microvawe\/samsung\/mg23f302tas","reviews":{"rating":50,"count":3,"html_url":"https:\/\/catalog.onliner.by\/microvawe\/samsung\/mg23f302tas\/reviews","url":"https:\/\/catalog.api.onliner.by\/products\/mg23f302tas\/reviews"},"review_url":null,"url":"https:\/\/catalog.api.onliner.by\/products\/mg23f302tas","prices":{"min":3190000,"price_min":{"amount":"319.00","currency":"BYN","converted":{"BYN":{"amount":"319.00","currency":"BYN"},"BYR":{"amount":"3190000","currency":"BYR"}}},"max":3210000,"price_max":{"amount":"321.00","currency":"BYN","converted":{"BYN":{"amount":"321.00","currency":"BYN"},"BYR":{"amount":"3210000","currency":"BYR"}}},"currency_sign":"руб.","towns":{"minsk":{"count":6}},"offers":{"count":6},"html_url":"https:\/\/catalog.onliner.by\/microvawe\/samsung\/mg23f302tas\/prices","url":"https:\/\/shop.api.onliner.by\/products\/mg23f302tas\/positions"},"second":{"offers_count":1,"min_price":{"amount":"200.00","currency":"BYN"}},"is_tender_enabled":false,"tender_disability_reason":"Не участвует в тендерах"},{"id":3676,"key":"20mw8001479bds","name":"20MW800-1479BDS","full_name":"Horizont 20MW800-1479BDS","name_prefix":"Микроволновая печь","extended_name":"Horizont 20MW800-1479BDS","status":"active","images":{"header":"\/\/content2.onliner.by\/catalog\/device\/header\/f10bbae6adf05996a6145e7214358964.jpeg","icon":"\/\/content2.onliner.by\/catalog\/device\/icon\/754c14be69d166a341c54b973f502bbf.jpg"},"description":"микроволны и гриль, объем 20 л, выходная мощность микроволн 800 Вт, управление электронное, автоприготовление, авторазмораживание, цвет серебристый","html_url":"https:\/\/catalog.onliner.by\/microvawe\/horizont\/20mw8001479bds","reviews":{"rating":45,"count":14,"html_url":"https:\/\/catalog.onliner.by\/microvawe\/horizont\/20mw8001479bds\/reviews","url":"https:\/\/catalog.api.onliner.by\/products\/20mw8001479bds\/reviews"},"review_url":null,"url":"https:\/\/catalog.api.onliner.by\/products\/20mw8001479bds","prices":{"min":1637000,"price_min":{"amount":"163.70","currency":"BYN","converted":{"BYN":{"amount":"163.70","currency":"BYN"},"BYR":{"amount":"1637000","currency":"BYR"}}},"max":1926000,"price_max":{"amount":"192.60","currency":"BYN","converted":{"BYN":{"amount":"192.60","currency":"BYN"},"BYR":{"amount":"1926000","currency":"BYR"}}},"currency_sign":"руб.","towns":{"minsk":{"count":18}},"offers":{"count":18},"html_url":"https:\/\/catalog.onliner.by\/microvawe\/horizont\/20mw8001479bds\/prices","url":"https:\/\/shop.api.onliner.by\/products\/20mw8001479bds\/positions"},"second":{"offers_count":1,"min_price":{"amount":"127.00","currency":"BYN"}},"is_tender_enabled":false,"tender_disability_reason":"Не участвует в тендерах"},{"id":201785,"key":"samsungfw77srb","name":"FW77SR-B","full_name":"Samsung FW77SR-B","name_prefix":"Микроволновая печь","extended_name":"Samsung FW77SR-B","status":"active","images":{"header":"\/\/content2.onliner.by\/catalog\/device\/header\/7098186e6b9b41e2eb13115b80f85412.jpg","icon":"\/\/content2.onliner.by\/catalog\/device\/icon\/582b4720a39505bd37bf88b7bdf354f6.jpg"},"description":"микроволны (соло), объем 20 л, выходная мощность микроволн 850 Вт, управление электронное, пароварка, автоприготовление, авторазмораживание, цвет черный","html_url":"https:\/\/catalog.onliner.by\/microvawe\/samsung\/samsungfw77srb","reviews":{"rating":45,"count":8,"html_url":"https:\/\/catalog.onliner.by\/microvawe\/samsung\/samsungfw77srb\/reviews","url":"https:\/\/catalog.api.onliner.by\/products\/samsungfw77srb\/reviews"},"review_url":null,"url":"https:\/\/catalog.api.onliner.by\/products\/samsungfw77srb","prices":{"min":4990000,"price_min":{"amount":"499.00","currency":"BYN","converted":{"BYN":{"amount":"499.00","currency":"BYN"},"BYR":{"amount":"4990000","currency":"BYR"}}},"max":5200000,"price_max":{"amount":"520.00","currency":"BYN","converted":{"BYN":{"amount":"520.00","currency":"BYN"},"BYR":{"amount":"5200000","currency":"BYR"}}},"currency_sign":"руб.","towns":{"minsk":{"count":5}},"offers":{"count":5},"html_url":"https:\/\/catalog.onliner.by\/microvawe\/samsung\/samsungfw77srb\/prices","url":"https:\/\/shop.api.onliner.by\/products\/samsungfw77srb\/positions"},"second":{"offers_count":0,"min_price":null},"is_tender_enabled":false,"tender_disability_reason":"Не участвует в тендерах"}],"total":6880,"page":{"limit":10,"items":10,"current":1,"last":688}}
+    </script>
+</body>
+</html>

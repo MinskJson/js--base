@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+</head>
+<body>
+    <form>
+        <div class="group">
+            <label>
+                <span>Currency</span>
+                <select name="from-currency">
+                </select>
+            </label>
+            <label>
+                <span>From</span>
+                <input type="number" name="from" />
+            </label>
+        </div>
+        <div class="group">
+            <label>
+                <span>Currency</span>
+                <select name="to-currency">
+                </select>
+            </label>
+            <label>
+                <span>TO</span>
+                <input type="number" name="to" />
+            </label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function addOption(key, value) {
+            const el = document.createElement('option');
+            el.value = key;
+            el.innerText = key;
+
+            return el;
+        }
+
+        function fillSelectsWithData(ratesObj) {
+            const selectFrom = document.querySelector('[name="from-currency"]')
+            const selectTo = document.querySelector('[name="to-currency"]')
+
+            Object.keys(ratesObj).forEach(key => {
+                let option1 = addOption(key, ratesObj[key]);
+                selectFrom.appendChild(option1);
+
+                let option2 = addOption(key, ratesObj[key]);
+                selectTo.appendChild(option2);
+            });
+        }
+
+        axios.get('https://api.exchangeratesapi.io/latest').then(response => {
+            if (response && response.data) {
+                fillSelectsWithData({EURO: 1});
+                fillSelectsWithData(response.data.rates);
+            }
+        });
+
+        const from = document.querySelector('[name="from"]');
+        const to = document.querySelector('[name="to"]');
+        const selectFrom = document.querySelector('[name="from-currency"]')
+        const selectTo = document.querySelector('[name="to-currency"]')
+
+        const debounce = (fn, timeout) => {
+            let timer;
+            return (...arg) => {
+                clearTimeout(timer);
+
+                timer = setTimeout(() => {
+                    fn(...arg);
+                }, timeout);
+            }
+        }
+
+        const recalc =
+            (to, from, valueFrom, valueTo) =>
+                () => {
+                    axios.get(`https://api.exchangeratesapi.io/latest?symbols=${valueFrom.value},${valueTo.value}`).then(response => {
+                        if (response && response.data) {
+                            const valueFromValue = response.data.rates[valueFrom.value];
+                            const valueToValue = response.data.rates[valueTo.value];
+
+                            to.value = from.value / valueFromValue * valueToValue;
+                        }
+                    });
+                }
+
+        selectFrom.addEventListener('change', debounce(recalc(to, from, selectFrom, selectTo), 1000))
+        from.addEventListener('input', debounce(recalc(to, from, selectFrom, selectTo), 1000))
+
+        to.addEventListener('input', debounce(recalc(from, to, selectTo, selectFrom), 300));
+        selectTo.addEventListener('change', debounce(recalc(from, to, selectTo, selectFrom), 300));
+    </script>
+</body>
+</html>

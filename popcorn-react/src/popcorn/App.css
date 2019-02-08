@@ -1,0 +1,81 @@
+/* button */
+.button {
+    /* action bg: */
+    background: #E53935;
+    box-shadow: 0 8px 30px 0 rgba(229,57,53,0.31);
+    border-radius: 6px;
+    /* Action: */
+    font-family: Helvetica;
+    font-size: 13px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* list-item */
+.list-item {
+    /* card_base: */
+    background: #FFFFFF;
+    box-shadow: 0 8px 30px 0 rgba(227,227,227,0.37);
+    border-radius: 10px;
+    padding: 15px 12px;
+    display: flex;
+    max-height: 112px;
+    margin-top: 56px;
+}
+
+.list-item__block + .list-item__block {
+    margin-left: 20px;
+}
+
+.list-item__img-wr {
+    margin-top: -42px;
+}
+.list-item__img-wr,  .list-item__img-wr img {
+    /* Mask: */
+    background: #D8D8D8;
+    border-radius: 10px;
+    width: 108px;
+    height: 123px;
+    object-fit: cover;
+    /* doctor strange 1: */
+    /* paddington-2-et00057858-30-05-2017-03-52-01: */
+}
+
+.list-item__title {
+    /* Star Wars: The Last: */
+    font-family: Helvetica;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 0;
+    margin-bottom: 4px;
+}
+
+.list-item__sub-title {
+    /* Action | Science fic: */
+    font-family: Helvetica;
+    font-size: 12px;
+    color: #A6A6A6;
+    margin-bottom: 7px;
+    letter-spacing: 0;
+}
+
+.list-item__rate {
+    /* IMDB: */
+    font-family: Helvetica;
+    font-size: 12px;
+    color: #A6A6A6;
+    letter-spacing: 0;
+}
+
+.list-item__rate b{
+    /* 7.5: */
+    font-family: Helvetica;
+    font-size: 12px;
+    color: #000000;
+    letter-spacing: 0;
+}

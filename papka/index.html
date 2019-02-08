@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+</head>
+<body>
+    <style>
+        form {
+            padding: 40px;
+        }
+    </style>
+
+    <form novalidate>
+        <input
+            type="text"
+            name="name"
+            placeholder="hello"
+            required
+            pattern="[0-9]*"
+            title="asdasd"
+        />
+        <input
+            type="file"
+            name="file"
+            placeholder="hello"
+        />
+        <div id="message"></div>
+        <button type="submit">
+            Button
+        </button>
+    </form>
+    <script>
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const msg = document.querySelector('#message');
+
+            if (!form.name.checkValidity()) {
+                msg.innerHTML += `<div>${form.name.validationMessage}</div>`;
+                return;
+            }
+
+            const data = new FormData(form)
+
+            axios.post('/x', data);
+        });
+    </script>
+</body>
+</html>
