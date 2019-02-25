@@ -1,0 +1,34 @@
+:root {
+  --active: #ccc;
+  --empty: white;
+  --border: 1px solid var(--active);
+}
+
+.game-cell {
+  display: flex;
+  width: 12px;
+  height: 12px;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  border: var(--border);
+}
+
+.game-cell--1 {
+  background: var(--active);
+}
+
+.game-cell--0 {
+  background: var(--empty);
+}
+
+.game-row {
+  display: flex;
+}
+
+.game {
+  clear: both;
+  border: var(--border);
+  margin: auto;
+  float: left;
+}
