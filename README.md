@@ -52,6 +52,8 @@ Design Patterns;
 10. Читаешь про agile и процессы в командах. https://ru.wikipedia.org/wiki/%D0%93%D0%B8%D0%B1%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F_%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8 впринципе все что надо знать тут http://www.full-stackagile.com/2016/02/14/team-organisation-squads-chapters-tribes-and-guilds/
 11. Читаешь книгу типо https://oz.by/books/more10120181.html, что бы понимать как самоорганизоваться.
 
+12. Читаешь лучшие практики по Node.js https://bestofjs.org/projects/nodejs-best-practices и вкуриваешь их без всяких фрэймворков.
+
 И все ты готов к собеседованию на должность среднего разработчика. Обычно примерно такой уровень занний выносят за 3-4 года вуза в БГУИР.
 
 ...а вообще самое главное в IT это ходить на собеседование. И не боятся написать рекрутеру
