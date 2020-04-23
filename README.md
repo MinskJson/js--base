@@ -25,18 +25,21 @@ https://frontender.info/
 https://medium.com/devschacht
 
 ## Изучить штуки (хотя бы базовое понимание):
-Git;
-Terminal; - лучше всего сразу в линуксе или osx;
-Структуры данных и алгоритмы;
-SOLID, KISS, YAGNI;
-Github;
-Различия в open source лицензиях;
-Semantic Versioning;
-SSH;
-HTTP, HTTPS, разные типы API (WebSockets, REST, GraphQL, …)
-Design Patterns;
-Кодировки и тп;
-Что такое JSON, XML;
+1. Git;
+2. Terminal; - лучше всего сразу в линуксе или osx;
+3. Структуры данных и алгоритмы;
+4. SOLID, KISS, YAGNI;
+5. Github;
+6. Различия в open source лицензиях;
+7. Semantic Versioning;
+8. SSH;
+9. HTTP, HTTPS, разные типы API (WebSockets, REST, GraphQL, …)
+10. Design Patterns;
+11. Кодировки и тп;
+12. Что такое JSON, XML;
+
+## Общие штуки
+https://github.com/elsewhencode/project-guidelines/blob/master/README-ru.md
 
 ## В общем случае:
 
