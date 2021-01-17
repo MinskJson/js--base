@@ -5,7 +5,7 @@ https://github.com/vvscode/js--base-course
 
 
 ## Перед тем как начать двигаться в IT:
-https://uideo.ru/videos/381
+https://www.youtube.com/watch?v=uLXFz2na4SY
 
 ## Что почитать:
 
